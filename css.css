@@ -1,23 +1,64 @@
-/* --- Global --- */
-body {
+/* --- RESET --- */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- FUENTES PERSONALIZADAS --- */
+@font-face {
+  font-family: 'cool';
+  src: url("schol.ttf");
+}
+@font-face {
+  font-family: 'perros';
+  src: url("perro.otf");
+}
+
+/* --- GLOBAL --- */
+body {
   font-family: 'cool', sans-serif;
   line-height: 1.6;
+  color: #351F14;
+  background: #fff;
 }
-
-/* --- Botón general --- */
-.btn {
+a {
   text-decoration: none;
-  color: #ffffff;
-  background-color: #351F14;
-  padding: 1rem;
-  border-radius: 1rem;
-  border: 1px solid black;
-  display: inline-block;
-  text-align: center;
+  color: inherit;
+}
+h1, h2, h3 {
+  font-family: 'cool';
+  margin-bottom: 10px;
+}
+p {
+  font-family: 'perros';
+  font-size: 18px;
 }
 
-/* --- Header --- */
+/* --- BOTONES --- */
+.btn, .conoce, .cap1 {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 1rem;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.2s;
+}
+.btn:hover, .conoce:hover, .cap1:hover {
+  transform: scale(1.05);
+}
+.btn {
+  background: #351F14;
+}
+.conoce {
+  background: #646610;
+}
+.cap1 {
+  background: #E5152E;
+  margin-top: 1rem;
+}
+
+/* --- HEADER --- */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -25,95 +66,87 @@ body {
   padding: 15px 40px;
   background: #FFC233;
 }
-.main-nav a {
-  margin-left: 15px;
-  text-decoration: none;
-  color: #351F14;
-  font-weight: bold;
-}
 .señora {
-  width: 350px;
-  height: 20vh;
+  width: 300px;
+  height: auto;
+}
+.main-nav a {
+  margin-left: 20px;
+  font-weight: bold;
+  color: #351F14;
 }
 
-/* --- Botones especiales --- */
-.conoce {
-  background-color: #646610;
-  text-decoration: none;
-  color: white;
-  width: 120px;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  display: inline-block;
-}
-.cap1 {
-  background-color: #E5152E;
-  text-decoration: none;
-  color: white;
-  width: 160px;
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-}
-
-/* --- Bienvenida --- */
+/* --- BIENVENIDA --- */
 .welcome {
-  padding: 40px 20px;
+  min-height: 100vh;
+  background: url("otoño.png") center/cover no-repeat;
+  padding: 60px 20px;
   text-align: center;
-  background-image: url(otoño.png);
-  background-size: cover;
-  background-position: center;
-  height: 89vh;
 }
 .welcome h1 {
-  margin-top: 7rem;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 .welcome p {
-  margin-top: 2rem;
-  font-family: 'perros', sans-serif;
-  font-size: 22px;
+  max-width: 900px;
+  margin: 0 auto 30px auto;
+  font-size: 20px;
 }
 
-/* --- Hero --- */
+/* --- HERO --- */
 .hero .stage {
-  height: 100vh;
-  background-image: url(escenario.png);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: space-between; /* título izq / texto der */
-  align-items: center;
-  padding: 50px;
-  color: white;
-}
-.hero h2 {
-  font-size: 48px;
-  max-width: 40%;
-  text-align: left;
-}
-.texto-derecha {
+  min-height: 100vh;
+  background: url("escenario.png") center/cover no-repeat;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: flex-start;
-  gap: 20px;
-  max-width: 40%;
+  padding: 80px;
+  color: #fff;
+  text-align: left;
 }
-.texto-derecha p {
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.hero p {
+  max-width: 500px;
   font-size: 20px;
-  margin: 0;
-  line-height: 1.4;
-}
-.relleno {
-  width: 70%;
-  height: 70vh;
-  object-fit: cover;
+  margin-bottom: 20px;
 }
 
-/* --- Flechas generales --- */
+/* --- HISTORIA --- */
+.story {
+  padding: 60px 20px;
+  text-align: center;
+}
+.cuadro {
+  max-width: 700px;
+  margin: 20px auto;
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* --- CAPÍTULOS --- */
+.titulo {
+  text-align: center;
+  margin: 40px 0 20px;
+}
+.chapters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.chapter img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
 .flechas {
   width: 50px;
-  height: auto;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -121,58 +154,14 @@ body {
   transform: scale(1.2);
 }
 
-/* --- Historia --- */
-.story {
-  padding: 40px 20px;
-  text-align: center;
-}
-.story p {
-  font-family: 'perros', sans-serif;
-  font-size: 20px;
-}
-.cuadro {
-  max-width: 700px;
-  margin: auto;
-  background: rgba(255,255,255,0.8);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-/* --- Capítulos --- */
-.chapters {
-  display: flex; /* flecha izq + capítulos + flecha der */
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-.chapter {
-  width: 100%;
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* --- Fuentes personalizadas --- */
-@font-face {
-  font-family: 'cool';
-  src: url(schol.ttf);
-}
-@font-face {
-  font-family: 'perros';
-  src: url(perro.otf);
-}
-
-/* --- Personajes --- */
+/* --- PERSONAJES --- */
 .characters {
-  display: flex; /* flecha izq + personajes + flecha der */
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   padding: 40px 20px;
-  background-image: url(sep.png);
-  background-size: cover;
-  background-position: center;
+  background: url("sep.png") center/cover no-repeat;
 }
 .foondo2 {
   display: flex;
@@ -180,35 +169,29 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url("Gemini_Generated_Image_6uuj816uuj816uuj.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("Gemini_Generated_Image_6uuj816uuj816uuj.png") center/cover no-repeat;
   padding: 20px;
   border-radius: 10px;
 }
 .char {
-  padding: 20px;
-  border-radius: 6px;
   text-align: center;
 }
 .personajet {
-  width: 200px;
+  width: 180px;
   height: auto;
   border-radius: 6px;
+  margin-bottom: 10px;
 }
 
-/* --- Creadores --- */
+/* --- CREADORES --- */
 .fondo {
   width: 100%;
-  background-image: url(oficinas.png);
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
+  background: url("oficinas.png") center/cover no-repeat;
+  padding: 60px 20px;
 }
 .unico {
   text-align: center;
-  font-family: 'cool';
+  margin-bottom: 30px;
 }
 .movedor {
   display: flex;
@@ -219,26 +202,16 @@ body {
 .creador {
   text-align: center;
 }
-.creador h2 {
-  margin-bottom: 10px;
-  font-family: 'cool';
-  color: black; /* ajusta según fondo */
-}
 .tallaL {
   width: 250px;
   height: auto;
 }
-.creadoresv {
-  width: 250px;
-  height: 60vh;
-}
 
-/* --- Footer --- */
+/* --- FOOTER --- */
 footer {
-  padding: 30px 20px;
   background: #351F14;
-  font-family: 'cool';
-  color: #ffffff;
+  color: #fff;
+  padding: 40px 20px;
 }
 footer .cols {
   display: flex;
@@ -246,27 +219,13 @@ footer .cols {
   justify-content: space-around;
   gap: 20px;
 }
-footer a {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: 'cool';
+footer h3 {
+  margin-bottom: 10px;
 }
-
-/* --- Generales --- */
-.titulo {
-  text-align: center;
-  font-family: 'cool';
+footer a {
+  color: #fff;
 }
 .identdv {
   width: 100px;
-}
-.contacto {
-  font-family: 'cool';
-}
-.ayuda{
-  margin-top: -500px;
-}
-.movert{
-  margin-top: -600px;
-  margin-left: 300px;
+  margin-top: 10px;
 }
