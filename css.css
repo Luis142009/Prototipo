@@ -1,7 +1,7 @@
 /* --- Global --- */
 body {
   margin: 0;
-  font-family: 'cool';
+  font-family: 'cool', sans-serif;
   line-height: 1.6;
 }
 
@@ -50,7 +50,7 @@ body {
   background-color: #E5152E;
   text-decoration: none;
   color: white;
-  width: 120px;
+  width: 160px;
   display: inline-block;
   margin-top: 2rem;
   padding: 0.5rem 1rem;
@@ -71,7 +71,7 @@ body {
 }
 .welcome p {
   margin-top: 2rem;
-  font-family: 'perros';
+  font-family: 'perros', sans-serif;
   font-size: 22px;
 }
 
@@ -82,15 +82,27 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* título izq / texto der */
   align-items: center;
+  padding: 50px;
   color: white;
-  text-align: center;
 }
 .hero h2 {
   font-size: 48px;
-  margin-bottom: 10px;
+  max-width: 40%;
+  text-align: left;
+}
+.texto-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 40%;
+}
+.texto-derecha p {
+  font-size: 20px;
+  margin: 0;
+  line-height: 1.4;
 }
 .relleno {
   width: 70%;
@@ -115,7 +127,7 @@ body {
   text-align: center;
 }
 .story p {
-  font-family: 'perros';
+  font-family: 'perros', sans-serif;
   font-size: 20px;
 }
 .cuadro {
@@ -128,7 +140,7 @@ body {
 
 /* --- Capítulos --- */
 .chapters {
-  display: flex;               /* flecha izq + capítulos + flecha der */
+  display: flex; /* flecha izq + capítulos + flecha der */
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -153,7 +165,7 @@ body {
 
 /* --- Personajes --- */
 .characters {
-  display: flex;               /* flecha izq + personajes + flecha der */
+  display: flex; /* flecha izq + personajes + flecha der */
   align-items: center;
   justify-content: center;
   gap: 20px;
@@ -198,8 +210,23 @@ body {
   text-align: center;
   font-family: 'cool';
 }
+.movedor {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.creador {
+  text-align: center;
+}
+.creador h2 {
+  margin-bottom: 10px;
+  font-family: 'cool';
+  color: black; /* ajusta según fondo */
+}
 .tallaL {
-  width: 430px;
+  width: 250px;
+  height: auto;
 }
 .creadoresv {
   width: 250px;
@@ -232,8 +259,14 @@ footer a {
 }
 .identdv {
   width: 100px;
-  font-family: 'cool';
 }
 .contacto {
   font-family: 'cool';
+}
+.ayuda{
+  margin-top: -600px;
+}
+.movert{
+  margin-top: -600px;
+  margin-left: 300px;
 }
